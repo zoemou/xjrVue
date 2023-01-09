@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+	<title></title>
+  
+</head>
+<body>
+<noscript>
+	<strong>抱歉，javascript被禁用，请开启后重试。</strong>
+</noscript>
+<div >1111111</div>
+</body>
+<script>
+  // 在这个iframe所加载的HTML中绑定一个事件监听器，当事件被触发时，把接收到的token数据写入localStorage
+window.addEventListener('message', function (event) {
+  console.log("子系统接受消息",event)
+  let tokenCache = { content:event.data.token,dataType : 'string' , datetime : new Date().getTime()}
+    localStorage.setItem('avue-token', JSON.stringify(tokenCache))
+
+    let userCache = { content:event.data.userInfo,dataType : 'string' , datetime : new Date().getTime()}
+    localStorage.setItem('avue-userInfo', JSON.stringify(userCache))
+    
+    
+    // console.log("coke",getCookie("Authorization"))
+    // setCookie("Authorization",event.data,60)
+}, false);
+
+
+// //设置cookie
+// function setCookie(cname, cvalue, exdays) {
+//     var d = new Date();
+//     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+//     var expires = "expires="+d.toUTCString();
+//     document.cookie = cname + "=" + cvalue + "; " + expires;
+// }
+
+// //获取cookie
+// function getCookie(cname) {
+//     var name = cname + "=";
+//     var ca = document.cookie.split(';');
+//     for(var i=0; i<ca.length; i++) {
+//         var c = ca[i];
+//         while (c.charAt(0)==' ') c = c.substring(1);
+//         if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+//     }
+//     return "";
+// }
+</script>
+</html>

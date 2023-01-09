@@ -1,0 +1,53 @@
+
+const getters = {
+  tag: state => state.tags.tag,
+  language: state => state.common.language,
+  website: state => state.common.website,
+  sysCategory:state=>state.common.sysCategory,
+  isTopMenu : state => state.common.isTopMenu,
+  userInfo: state => state.user.userInfo,
+  avatar: state => state.user.userInfo.avatar,
+  colorName: state => state.common.colorName,
+  themeName: state => state.common.themeName,
+  isShade: state => state.common.isShade,
+  isCollapse: state => state.common.isCollapse,
+  keyCollapse: (state, getters) => getters.screen > 1 ? getters.isCollapse : false,
+	menuCollapse: state => state.user.menuCollapse,
+  screen: state => state.common.screen,
+  isLock: state => state.common.isLock,
+  isFullScren: state => state.common.isFullScren,
+  isMenu: state => state.common.isMenu,
+  lockPasswd: state => state.common.lockPasswd,
+  tagList: state => state.tags.tagList,
+  tagWel: state => state.tags.tagWel,
+  token: state => state.user.token,
+  roles: state => state.user.roles,
+  permission: state => state.user.permission,
+  menuId: state => state.user.menuId,
+  menu: state => state.user.menu,
+  menuAll: state => state.user.menuAll,
+  allSystem: state => state.user.allSystem,
+  systemId: state => state.user.systemId,
+  curIndexUrl: state => state.user.curIndexUrl,
+  logsList: state => state.logs.logsList,
+  logsLen: state => state.logs.logsList.length || 0,
+  logsFlag: (state, getters) => getters.logsLen === 0,
+  MFFormList: state => state.mobileData.formList,  //移动端表单设计组件列表
+  MFActiveData: state => state.mobileData.activeData, //移动端表单设计当前激活组件
+  MSFormList: state => state.mobileData.searchList,  //移动端查询设计组件列表
+  MSActiveData: state => state.mobileData.searchCurData, //移动端查询设计当前激活组件
+  MLItemList:state => state.mobileData.itemList, //移动端列表设计组件列表
+  MLListCurItem:state => state.mobileData.listCurItem, //移动端列表设计当前激活组件
+  MDAllStepData:state => state.mobileData.allStepData, //移动端设计所有步骤数据
+  MFCurStep:state => state.mobileData.curStep, //移动端功能设计当前步骤
+  HomeAllStep:state=>state.mobileData.homeAllStep, //首页设计所有步骤数据
+  homeActiveData:state=>state.mobileData.homeActiveData, //首页设计当前激活组件
+  LoginAllStep:state=>state.mobileData.loginAllStep, //登录设计所有步骤数据
+  inputParameter:state=>state.interfaceDevelopment.inputParameter,  //入参配置
+  variable:state=>state.interfaceDevelopment.variable,   //变量配置
+  interfaceConfig:state=>state.interfaceDevelopment.interfaceConfig,   //接口配置
+  outParameter:state=>state.interfaceDevelopment.outParameter,   //出参配置
+  outputConfig:state=>state.interfaceDevelopment.outputConfig,   //输出配置
+  allForm:state=>state.workflow.allForm,   //流程设计全局所有表单
+}
+export default getters

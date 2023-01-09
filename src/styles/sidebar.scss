@@ -1,0 +1,95 @@
+
+
+.default{
+    height: 100%;
+	.avue-layout{
+		height: calc(100% - 64px);
+	}
+    .el-menu--popup{
+        .el-menu-item{
+            background-color: #050834;
+            i,span{
+                color:hsla(0,0%,100%,.7);
+            }
+            &:hover{
+                i,span{
+                    color:#fff;
+                }
+            }
+            &.is-active {
+                background-color: rgba(0,0,0,.8);
+                &:before {
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 4px;
+                    background: #409eff;
+                    position: absolute;
+                }
+                i,span{
+                    color:#fff;
+                }
+            }
+        }
+		.el-submenu{
+			background-color: #050834;
+		}
+    }
+    .avue-sidebar {
+        user-select: none; 
+        position: relative;
+        height: 100%;
+        position: relative;
+        background-color: #07093E;
+        box-sizing: border-box;
+        box-shadow: 2px 0 6px rgba(0,21,41,.35);
+        overflow-y: auto;
+		overflow-x: hidden;
+        &--tip{
+            width:90%;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            position: absolute;
+            top:5px;
+            left:5%;
+            color:#ccc;
+            z-index: 2;
+            text-align: center;
+            font-size: 14px;
+            background-color: rgba(0,0,0,.4);
+        }
+        .el-menu-item,.el-submenu__title{
+            i{
+                // margin-right: 10px;
+            }
+            i,span{
+                color:hsla(0,0%,100%,1);
+            }
+            &:hover{
+                background: transparent;
+                i,span{
+                   color:#5E95FF;
+                }
+            }
+            &.is-active {
+                &:before {
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 4px;
+                    background: #5E95FF;
+                    position: absolute;
+                }
+                background-color:#5E95FF;
+                i,span{
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
