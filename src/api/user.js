@@ -12,7 +12,7 @@ export const loginByUsername = (param) =>
     },
     data: {
       account :param.username,
-      password : md5(param.password),
+      password : param.password,
       code : param.code
     },
   });

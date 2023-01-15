@@ -1,6 +1,5 @@
 import request from "@/router/axios";
-import { baseUrl,
- } from "@/config/env";
+import { baseUrl} from "@/config/env";
 // import qs from "qs";
 // 模板分类
 export const getDataItem = code =>

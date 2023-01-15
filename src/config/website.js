@@ -13,7 +13,7 @@ export default {
   refreshInterval: 60000, //消息刷新间隔时间
   key: "avue", //配置主键,目前用于存储
   indexTitle: "LEARUNSOFT", //菜单树标题
-  platformName: "快速开发平台", //平台名称
+  platformName: "", //平台名称
   copyright: "Copyright © 力软信息技术（苏州）有限公司, All Rights Reserved. ", //公司备案信息
   link: "http://www.xjrsoft.com", //logo 图点击跳转
   logoImg: "/img/logo_white.png", //菜单树log图片地址  将图片放入/public下就行了
@@ -33,7 +33,7 @@ export default {
   genCodePath: `Customer`, //为代码生成器 前端文件输出目录  在 /src/viwes（这两级文件夹不用写） 下 的文件夹
   //配置首页不可关闭
   isFirstPage: true,
-  isTheDemoEnvironment: true, //是否为演示环境
+  isTheDemoEnvironment: false, //是否为演示环境
   applicationPlatformId: "17d444b953948c6d79d679f46a95af12", //子系统应用平台F_Id
   businessPlatformId: "7d4711c8c12c8bcc9254fd903ebc147d", //子系统业务平台F_Id
   fistPage: [

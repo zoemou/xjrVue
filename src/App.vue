@@ -112,7 +112,7 @@ export default {
         const elLocal = await import("element-ui/lib/locale/lang/" + it.F_Code);
 
         const local = await getTranslationByType(it.F_Code);
-		console.log("ttttttttttttttttttt",local)
+		    console.log("ttttttttttttttttttt",local)
         const langObj = local.data.data;
 
         // const allLg = Object.assign(local.data.data,defaultLg)
