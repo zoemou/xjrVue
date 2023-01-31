@@ -3,7 +3,7 @@
 let baseUrl = "/";
 const webpack = require('webpack');
 
-const BASE_URL = process.env.NODE_ENV == "development" ? "/" : "/";
+const BASE_URL = process.env.NODE_ENV == "production" ? "/" : "/";
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const path = require("path");
 const timeStamp = new Date().getTime();
